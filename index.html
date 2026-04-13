@@ -1,8 +1,8 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>扩板支架喷胶规格看板</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -203,10 +203,10 @@
             background: linear-gradient(90deg, #3b82f6, #60a5fa);
         }
 
-        /* 改为5个参数 */
+        /* 顶部 KPI：6个参数 */
         .kpi-row {
             display: grid;
-            grid-template-columns: repeat(5, 1fr);
+            grid-template-columns: repeat(6, 1fr);
             gap: 15px;
             margin-bottom: 20px;
         }
@@ -251,6 +251,10 @@
             line-height: 1.6;
         }
 
+        @media (max-width: 1200px) {
+            .kpi-row { grid-template-columns: repeat(3, 1fr); }
+        }
+
         @media (max-width: 900px) {
             .grid { grid-template-columns: 1fr; }
             .full-card { grid-column: span 1; }
@@ -266,11 +270,15 @@
             <p>小米电视背光模组喷胶工艺标准化参数</p>
         </div>
 
-        <!-- KPI指标（新增胶量范围） -->
+        <!-- KPI指标（6项） -->
         <div class="kpi-row">
             <div class="kpi-card">
                 <div class="kpi-value">0.006~0.01</div>
                 <div class="kpi-label">胶量范围 (g/cm²)</div>
+            </div>
+            <div class="kpi-card">
+                <div class="kpi-value">25-45mm</div>
+                <div class="kpi-label">胶线宽度范围</div>
             </div>
             <div class="kpi-card">
                 <div class="kpi-value">≥12丝</div>
@@ -408,7 +416,6 @@
                         <td><strong>胶线宽度范围</strong></td>
                         <td class="highlight">25 ~ 45 mm</td>
                         <td class="highlight">25 ~ 45 mm</td>
-                        <!-- 改这里 -->
                         <td>覆盖接触面和mark线</td>
                     </tr>
                     <tr>
@@ -445,7 +452,7 @@
             </table>
         </div>
 
-        <!-- 参数进度条展示（完整保留） -->
+        <!-- 参数进度条展示 -->
         <div class="grid">
             <div class="card">
                 <div class="card-header">
